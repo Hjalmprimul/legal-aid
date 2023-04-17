@@ -1,0 +1,49 @@
+:root{
+    --color1: #000000;/* Negro */
+    --color2:  #14274a;/* Azul Francia */
+    --color3: #425a9d; /* Azul Oscuro */
+    --color4: #7d92fb; /* Cyan */
+    --color5: #c6d0ff; /* Celeste Claro */
+}
+body{
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+/* --------- */
+/* ETIQUETAS */
+/* --------- */
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: var(--color4);
+    background: linear-gradient(90deg, var(--color4) 0%, var(--color3) 25%, var(--color2) 50%, var(--color3) 75%, var(--color4) 100%);
+    background-size: 500%;
+    background-position: 0px 0px;
+    animation: back 20s infinite;
+    /* posicionamiento */
+    display: flex;
+    justify-content: center;
+}
+.content{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.logo{
+    width: 100%;
+}
+.logo .name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes back{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
