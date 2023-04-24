@@ -7,10 +7,16 @@
 }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: white;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  min-width: 425px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* --------- */
@@ -19,10 +25,7 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  background: var(--color3);
-  background: radial-gradient(circle, var(--color3) 0%, var(--color4) 100%);
-  background-size: 250%;
-  animation: back 20s infinite;
+  background: url("../src/layered-waves-haikei.svg") no-repeat center center/cover;
   /* posicionamiento */
   display: flex;
   justify-content: center;
@@ -38,17 +41,15 @@ body {
 
 .logo {
   width: 100%;
-  font-size: 50px;
+  font-size: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  -webkit-text-stroke: 2px #000000;
-  -webkit-text-fill: white;
 }
 .logo img {
-  width: 150px;
-  height: 125px;
+  width: 15%;
+  height: auto;
 }
 .logo .name {
   display: flex;
@@ -61,23 +62,21 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  -webkit-text-stroke: 0.3px #000000;
+  font-size: 1.5vw;
   color: white;
 }
 .intro .intro2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 1.7vw;
 }
 
 .instrucciones {
   color: white;
   display: flex;
   justify-content: center;
-  font-size: 20px;
-  -webkit-text-stroke: 0.3px #000000;
+  font-size: 1.25vw;
 }
 
 .botones {
@@ -92,9 +91,9 @@ body {
   cursor: pointer;
   background: var(--color2);
   color: white;
-  padding: 30px;
+  padding: 5%;
   width: 50%;
-  height: 50%;
+  height: 60%;
   margin-left: 20%;
   margin-right: 16.5%;
   display: grid;
@@ -107,22 +106,22 @@ body {
   -moz-box-shadow: -3px 0px 45px 16px rgba(0, 0, 0, 0.74);
 }
 .botones .btn-contacto .titleBoton {
-  font-size: 27px;
+  font-size: 1.3vw;
 }
 .botones .btn-contacto .desc {
-  font-size: 20px;
+  font-size: 1.25vw;
 }
 .botones .btn-contacto .iconBoton img {
-  width: 100px;
+  width: 50%;
   margin-left: 18%;
 }
 .botones .btn-doc {
   cursor: pointer;
   background: var(--color2);
   color: white;
-  padding: 30px;
+  padding: 5%;
   width: 50%;
-  height: 50%;
+  height: 60%;
   margin-left: 20%;
   margin-right: 16.5%;
   display: grid;
@@ -135,13 +134,13 @@ body {
   -moz-box-shadow: -3px 0px 45px 16px rgba(0, 0, 0, 0.74);
 }
 .botones .btn-doc .titleBoton {
-  font-size: 27px;
+  font-size: 1.3vw;
 }
 .botones .btn-doc .desc {
-  font-size: 20px;
+  font-size: 1.25vw;
 }
 .botones .btn-doc .iconBoton img {
-  width: 100px;
+  width: 50%;
   margin-left: 18%;
 }
 
@@ -153,14 +152,6 @@ body {
   -moz-box-shadow: 10px 10px 200px 34px rgba(0, 0, 0, 0.75);
 }
 
-@keyframes back {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 100%;
-  }
-}
 .footer {
   height: 200px;
   background: var(--color1);
@@ -170,4 +161,55 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .logo {
+    font-size: 20px;
+  }
+  .logo img {
+    width: 60px;
+  }
+  .intro {
+    font-size: 10px;
+  }
+  .intro .intro2 {
+    font-size: 13px;
+  }
+  .instrucciones {
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  .botones {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .botones .btn-contacto,
+  .botones .btn-doc {
+    width: 315px;
+    height: 60px;
+    margin: 0;
+  }
+  .botones .btn-contacto .titleBoton,
+  .botones .btn-doc .titleBoton {
+    font-size: 10px;
+    padding-right: 80px;
+  }
+  .botones .btn-contacto .desc,
+  .botones .btn-doc .desc {
+    padding-right: 80px;
+    font-size: 8px;
+  }
+  .botones .btn-contacto .iconBoton,
+  .botones .btn-doc .iconBoton {
+    width: 180px;
+    position: relative;
+    right: -210px;
+    top: -60px;
+  }
 }/*# sourceMappingURL=idnex.css.map */
