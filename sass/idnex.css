@@ -4,11 +4,12 @@
   --color3: #425a9d; /* Azul Oscuro */
   --color4: #7d92fb; /* Cyan */
   --color5: #c6d0ff; /* Celeste Claro */
+  --colorBoton: rgb(79, 81, 140);
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: white;
+  background: url("../src/Sprinkle.svg") no-repeat center center/cover;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -17,6 +18,14 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+p {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
 }
 
 /* --------- */
@@ -46,6 +55,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   color: white;
+  margin-bottom: 5vh;
 }
 .logo img {
   width: 15%;
@@ -65,11 +75,15 @@ body::-webkit-scrollbar {
   font-size: 1.5vw;
   color: white;
 }
+.intro .intro1 {
+  margin-bottom: 1vh;
+}
 .intro .intro2 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.7vw;
+  margin-bottom: 3vh;
 }
 
 .instrucciones {
@@ -77,6 +91,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   font-size: 1.25vw;
+  margin-bottom: 8vh;
 }
 
 .botones {
@@ -89,7 +104,7 @@ body::-webkit-scrollbar {
 }
 .botones .btn-contacto {
   cursor: pointer;
-  background: var(--color2);
+  background: var(--colorBoton);
   color: white;
   padding: 5%;
   width: 50%;
@@ -107,17 +122,26 @@ body::-webkit-scrollbar {
 }
 .botones .btn-contacto .titleBoton {
   font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vh;
 }
 .botones .btn-contacto .desc {
-  font-size: 1.25vw;
+  font-size: 1.15vw;
+  margin-bottom: 1vh;
+}
+.botones .btn-contacto .iconBoton {
+  display: flex;
+  justify-content: right;
 }
 .botones .btn-contacto .iconBoton img {
   width: 50%;
-  margin-left: 18%;
+  margin: 0px;
 }
 .botones .btn-doc {
   cursor: pointer;
-  background: var(--color2);
+  background: var(--colorBoton);
   color: white;
   padding: 5%;
   width: 50%;
@@ -135,13 +159,22 @@ body::-webkit-scrollbar {
 }
 .botones .btn-doc .titleBoton {
   font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vh;
 }
 .botones .btn-doc .desc {
-  font-size: 1.25vw;
+  font-size: 1.15vw;
+  margin-bottom: 1vh;
+}
+.botones .btn-doc .iconBoton {
+  display: flex;
+  justify-content: right;
 }
 .botones .btn-doc .iconBoton img {
   width: 50%;
-  margin-left: 18%;
+  margin: 0px;
 }
 
 .btn-contacto:hover,
@@ -169,6 +202,13 @@ body::-webkit-scrollbar {
   }
 }
 @media only screen and (max-width: 425px) {
+  .container {
+    width: 100vw;
+    margin: 0px;
+  }
+  .content {
+    width: 100vw;
+  }
   .logo {
     font-size: 20px;
   }
@@ -191,7 +231,7 @@ body::-webkit-scrollbar {
   }
   .botones .btn-contacto,
   .botones .btn-doc {
-    width: 315px;
+    width: 100%;
     height: 60px;
     margin: 0;
   }
@@ -207,9 +247,9 @@ body::-webkit-scrollbar {
   }
   .botones .btn-contacto .iconBoton,
   .botones .btn-doc .iconBoton {
-    width: 180px;
+    width: 100px;
     position: relative;
-    right: -210px;
-    top: -60px;
+    right: -180px;
+    top: -40px;
   }
 }/*# sourceMappingURL=idnex.css.map */
